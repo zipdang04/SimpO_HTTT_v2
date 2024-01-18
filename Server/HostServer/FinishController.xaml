@@ -1,0 +1,138 @@
+﻿<UserControl x:Class="Server.HostServer.FinishController"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Server.HostServer"
+             xmlns:compo="clr-namespace:Server.HostServer.Components"
+             mc:Ignorable="d"   
+             d:DesignHeight="700" MinHeight="700" d:DesignWidth="600" MinWidth="600">
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Grid Height="100">
+                <Button x:Name="btnVeDich" Content="VỀ ĐÍCH" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Background="Red" Foreground="White" FontWeight="Bold" Click="btnVeDich_Click"/>
+                <Button x:Name="btnSceneQues" Content="Scene Câu hỏi" HorizontalAlignment="Left" Margin="290,43,0,0" VerticalAlignment="Top" Click="btnSceneQues_Click" Height="27"/>
+                <Button x:Name="btnScenePrac" Content="Scene Thực hành" HorizontalAlignment="Left" Margin="368,10,0,0" VerticalAlignment="Top" Click="btnScenePrac_Click" Height="28"/>
+                <Button x:Name="btnScenePoint" Content="Scene Chọn điểm" HorizontalAlignment="Left" Margin="274,10,0,0" VerticalAlignment="Top" Click="btnScenePoint_Click" Height="28"/>
+                <Button x:Name="btnSceneMedia" Content="Scene Media" HorizontalAlignment="Left" Margin="368,43,0,0" VerticalAlignment="Top" Click="btnSceneMedia_Click" Height="27"/>
+                <Button x:Name="btnIntro" Content="Mở Intro" HorizontalAlignment="Left" Margin="116,10,0,0" VerticalAlignment="Top" Click="btnIntro_Click" Height="28"/>
+                <Button x:Name="btnOpening" Content="Mở nhạc khai màn" HorizontalAlignment="Left" Margin="100,43,0,0" VerticalAlignment="Top" Click="btnOpening_Click" Height="27"/>
+
+            </Grid>
+            <Grid Height="40">
+                <Button x:Name="btnS1" Content="Thí sinh 1" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Click="btnS1_Click" Height="28"/>
+                <Button x:Name="btnS2" Content="Thí sinh 2" HorizontalAlignment="Left" Margin="70,0,0,0" VerticalAlignment="Center" Click="btnS2_Click" Height="28"/>
+                <Button x:Name="btnS3" Content="Thí sinh 3" HorizontalAlignment="Left" Margin="130,0,0,0" VerticalAlignment="Center" Click="btnS3_Click" Height="28"/>
+                <Button x:Name="btnS4" Content="Thí sinh 4" HorizontalAlignment="Left" Margin="190,0,0,0" VerticalAlignment="Center" Click="btnS4_Click" Height="28"/>
+            </Grid>
+            <Grid x:Name="grdChoosePoint" Height="125" Width="500">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="1" Grid.Column="0">Lượt 1</Label>
+                <Label Grid.Row="2" Grid.Column="0">Lượt 2</Label>
+                <Label Grid.Row="3" Grid.Column="0">Lượt 3</Label>
+                <Label Grid.Row="0" Grid.Column="1">Mức điểm</Label>
+                <Label Grid.Row="0" Grid.Column="2">Câu thứ</Label>
+
+                <ListBox x:Name="lstPoint1"  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBoxItem>10</ListBoxItem>
+                    <ListBoxItem>20</ListBoxItem>
+                    <ListBoxItem>30</ListBoxItem>
+                </ListBox>
+                <ListBox x:Name="lstPoint2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBoxItem>10</ListBoxItem>
+                    <ListBoxItem>20</ListBoxItem>
+                    <ListBoxItem>30</ListBoxItem>
+                </ListBox>
+                <ListBox x:Name="lstPoint3" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBoxItem>10</ListBoxItem>
+                    <ListBoxItem>20</ListBoxItem>
+                    <ListBoxItem>30</ListBoxItem>
+                </ListBox>
+                <ListBox x:Name="lstNo1" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBoxItem IsSelected="True">1</ListBoxItem>
+                    <ListBoxItem>2</ListBoxItem>
+                    <ListBoxItem>3</ListBoxItem>
+                </ListBox>
+                <ListBox x:Name="lstNo2" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBoxItem>1</ListBoxItem>
+                    <ListBoxItem IsSelected="True">2</ListBoxItem>
+                    <ListBoxItem>3</ListBoxItem>
+                </ListBox>
+                <ListBox x:Name="lstNo3" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBoxItem>1</ListBoxItem>
+                    <ListBoxItem>2</ListBoxItem>
+                    <ListBoxItem IsSelected="True">3</ListBoxItem>
+                </ListBox>
+                <Button x:Name="btnConfirmPts" Grid.Row="4" Grid.Column="3" Content="Xác nhận" Click="btnConfirmPts_Click"/>
+            </Grid>
+            <Grid x:Name="mainGrid" Height="320">
+                <Button x:Name="btnShowQuestion" Content="Hiện câu hỏi" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="btnShowQuestion_Click"/>
+                <Button x:Name="btnFinish" Content="Kết thúc lượt" HorizontalAlignment="Left" Margin="93,10,0,0" VerticalAlignment="Top" Click="btnFinish_Click"/>
+                <Label x:Name="lblTimer" HorizontalAlignment="Right" Margin="574,7,0,0" VerticalAlignment="Top" >0</Label>
+
+                <compo:QuestionShowing x:Name="questionBox" VerticalAlignment="Top" Margin="0,38,0,0" Height="130" />
+
+                <Button x:Name="btnStar" Content="Sao" HorizontalAlignment="Right" Margin="0,177,10,0" VerticalAlignment="Top" Background="Yellow" Height="44" Width="45" Click="btnStar_Click"/>
+                <Label HorizontalAlignment="Right" Margin="0,176,60,0" VerticalAlignment="Top">lưu ý: việc chọn sao chỉ có tác dụng sau khi bấm Hiện câu hỏi</Label>
+                <Label HorizontalAlignment="Right" Margin="0,196,60,0" VerticalAlignment="Top">NHỚ CHỌN SAO TRƯỚC KHI HIỆN CÂU HỎI MỚI</Label>
+
+                <Button x:Name="btnStart" Content="Bắt đầu suy nghĩ" HorizontalAlignment="Left" Margin="11,230,0,0" VerticalAlignment="Top" Click="btnStart_Click" Height="26"/>
+                <Button x:Name="btnPrac" Content="Bắt đầu thực hành" HorizontalAlignment="Left" Margin="111,230,0,0" VerticalAlignment="Top" Click="btnPrac_Click" Height="26"/>
+                <Button x:Name="btnCorrect" Content="Đúng" HorizontalAlignment="Left" Margin="12,269,0,0" VerticalAlignment="Top" Height="37" Width="54" Background="Lime" Click="btnCorrect_Click"/>
+                <Button x:Name="btnWrong" Content="Sai" HorizontalAlignment="Left" Margin="82,269,0,0" VerticalAlignment="Top" Height="37" Width="54" Background="Red" Click="btnWrong_Click"/>
+                <Button x:Name="btnSuckPrac" Content="Bắt đầu lại thực hành" HorizontalAlignment="Left" Margin="273,230,0,0" VerticalAlignment="Top" Click="btnSuckPrac_Click" Height="26" Width="132"/>
+                <Button x:Name="btnSuckCorrect" Content="Hút đúng" HorizontalAlignment="Center" Margin="0,269,0,0" VerticalAlignment="Top" Height="37" Width="54" Background="Lime" Click="btnSuckCorrect_Click"/>
+                <Button x:Name="btnSuckWrong" Content="Hút sai" HorizontalAlignment="Left" Margin="351,269,0,0" VerticalAlignment="Top" Height="37" Width="54" Background="Red" Click="btnSuckWrong_Click"/>
+                <Button x:Name="btnMedia" Content="Mở Clip/Ảnh" HorizontalAlignment="Left" Height="38" Margin="12,178,0,0" VerticalAlignment="Top" Width="84" Click="btnMedia_Click"/>
+                <Button x:Name="btnIntroPrac" Content="Nhạc thực hành" HorizontalAlignment="Left" Height="38" Margin="111,178,0,0" VerticalAlignment="Top" Width="93" Click="btnIntroPrac_Click"/>
+                <Button x:Name="btnEndWrong" Content="SAI" HorizontalAlignment="Left" Margin="536,269,0,0" VerticalAlignment="Top" Height="37" Width="54" Background="Red" Click="btnEndWrong_Click"/>
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

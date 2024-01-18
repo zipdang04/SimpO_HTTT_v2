@@ -1,0 +1,145 @@
+﻿<UserControl x:Class="Client.Viewer.GamesControl.Components.QNPBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Client.Viewer.GamesControl.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1600">
+    <Grid>
+        <!--
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="134*" />
+            <ColumnDefinition Width="1053*" />
+            <ColumnDefinition Width="83*" />
+            <ColumnDefinition Width="222*" />
+            <ColumnDefinition Width="108*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="622*"/>
+            <RowDefinition Height="203*"/>
+            <RowDefinition Height="75*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" Grid.Column="1">
+            <TextBlock Name="txtblQuestion" TextWrapping="Wrap" FontSize="23">
+                Đây là một câu hỏi rất là dàiiiiiii
+            </TextBlock>
+        </Label>
+        <Grid Grid.Row="1" Grid.Column="3" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="147*"/>
+                <ColumnDefinition Width="74*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label x:Name="lblPoint" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="100" Grid.ColumnSpan="2" Margin="0,0,0,18" Grid.RowSpan="2">365</Label>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1" Margin="0,0,0,187" Grid.RowSpan="2">
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                </Style>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="693*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="32*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblNormalName1" Content="{Binding Path=names[0]}" Grid.Row="1"  Grid.Column="0"/>
+            <Label x:Name="lblNormalName2" Content="{Binding Path=names[1]}" Grid.Row="1" Grid.Column="2"/>
+            <Label x:Name="lblNormalName3" Content="{Binding Path=names[2]}" Grid.Row="1" Grid.Column="4"/>
+            <Label x:Name="lblNormalName4" Content="{Binding Path=names[3]}" Grid.Row="1" Grid.Column="6"/>
+            <Label x:Name="lblNormalPoint1" Content="{Binding Path=points[0]}" Grid.Row="1" Grid.Column="1" FontWeight="Bold"/>
+            <Label x:Name="lblNormalPoint2" Content="{Binding Path=points[1]}" Grid.Row="1" Grid.Column="3" FontWeight="Bold"/>
+            <Label x:Name="lblNormalPoint3" Content="{Binding Path=points[2]}" Grid.Row="1" Grid.Column="5" FontWeight="Bold"/>
+            <Label x:Name="lblNormalPoint4" Content="{Binding Path=points[3]}" Grid.Row="1" Grid.Column="7" FontWeight="Bold"/>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1" Margin="0,0,0,187" Grid.RowSpan="2">
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                </Style>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="680*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="35*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblChosenName1" Content="{Binding Path=names[0]}" Grid.Row="1"  Grid.Column="0"/>
+            <Label x:Name="lblChosenName2" Content="{Binding Path=names[1]}" Grid.Row="1" Grid.Column="2"/>
+            <Label x:Name="lblChosenName3" Content="{Binding Path=names[2]}" Grid.Row="1" Grid.Column="4"/>
+            <Label x:Name="lblChosenName4" Content="{Binding Path=names[3]}" Grid.Row="1" Grid.Column="6"/>
+            <Label x:Name="lblChosenPoint1" Content="{Binding Path=points[0]}" Grid.Row="1" Grid.Column="1" FontWeight="Bold"/>
+            <Label x:Name="lblChosenPoint2" Content="{Binding Path=points[1]}" Grid.Row="1" Grid.Column="3" FontWeight="Bold"/>
+            <Label x:Name="lblChosenPoint3" Content="{Binding Path=points[2]}" Grid.Row="1" Grid.Column="5" FontWeight="Bold"/>
+            <Label x:Name="lblChosenPoint4" Content="{Binding Path=points[3]}" Grid.Row="1" Grid.Column="7" FontWeight="Bold"/>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="3" Margin="0,0,0,187" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="730*"/>
+                <RowDefinition Height="35*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="63*"/>
+                <ColumnDefinition Width="205*"/>
+                <ColumnDefinition Width="63*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="label" Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18">
+                1/2
+            </Label>
+        </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="D:/SimpO_Dohoa/Resource/Background_KD.png"/>
+        </Grid.Background>
+        -->
+        <Label x:Name="label" HorizontalAlignment="Left" Height="217" Margin="131,622,0,0" VerticalAlignment="Top" Width="1067">
+            <TextBlock Name="txtblQuestion" TextWrapping="Wrap" FontSize="40">
+                Đây là một câu hỏi rất là dàiiiiiii
+            </TextBlock>
+        </Label>
+        <Image x:Name="imgSuck1" Source="../../../Resources/Effects/Suck1.png"/>
+        <Image x:Name="imgSuck2" Source="../../../Resources/Effects/Suck2.png"/>
+        <Image x:Name="imgSuck3" Source="../../../Resources/Effects/Suck3.png"/>
+        <Image x:Name="imgCurr1" Source="../../../Resources/Effects/Current1.png"/>
+        <Image x:Name="imgCurr2" Source="../../../Resources/Effects/Current2.png"/>
+        <Image x:Name="imgCurr3" Source="../../../Resources/Effects/Current3.png"/>
+        <Label x:Name="lblPoint"  HorizontalAlignment="Left" Height="228" Margin="1289,613,0,0" VerticalAlignment="Top" Width="227" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="100"></Label>
+        <Label x:Name="lblName"  HorizontalAlignment="Left" Height="43" Margin="158,570,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Width="402"  Grid.Column="0" FontSize="22" FontWeight="Bold"></Label>
+        <Label x:Name="lblLabel"  HorizontalAlignment="Left" Height="43" Margin="560,570,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Width="90"  Grid.Column="0" FontSize="24" Content="12/13" FontWeight="Bold"/>
+        <Label x:Name="lblName1"  HorizontalAlignment="Left" Height="48" Margin="1267,331,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Width="210"  Grid.Column="0" FontSize="20" FontWeight="Bold" Content=""/>
+        <Label x:Name="lblName2"  HorizontalAlignment="Left" Height="48" Margin="1267,386,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Width="210"  Grid.Column="0" FontSize="20" FontWeight="Bold" Content=""/>
+        <Label x:Name="lblName3"  HorizontalAlignment="Left" Height="48" Margin="1267,440,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Width="210"  Grid.Column="0" FontSize="20" FontWeight="Bold" Content=""/>
+        <Label x:Name="lblPoint1"  HorizontalAlignment="Left" Height="48" Margin="1478,331,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Width="56"  Grid.Column="0" FontSize="26" FontWeight="Bold" Content=""/>
+        <Label x:Name="lblPoint2"  HorizontalAlignment="Left" Height="48" Margin="1478,386,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Width="56"  Grid.Column="0" FontSize="26" FontWeight="Bold" Content=""/>
+        <Label x:Name="lblPoint3"  HorizontalAlignment="Left" Height="48" Margin="1478,440,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Width="56"  Grid.Column="0" FontSize="26" FontWeight="Bold" Content=""/>
+        <Label x:Name="lblGroup1"  HorizontalAlignment="Left" Height="69" Margin="1267,506,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Width="68"  Grid.Column="0" FontSize="26" FontWeight="Bold" Content=""/>
+        <Label x:Name="lblGroup2"  HorizontalAlignment="Left" Height="69" Margin="1365,506,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Width="68"  Grid.Column="0" FontSize="26" FontWeight="Bold" Content=""/>
+        <Label x:Name="lblGroup3"  HorizontalAlignment="Left" Height="69" Margin="1465,506,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Width="68"  Grid.Column="0" FontSize="26" FontWeight="Bold" Content=""/>
+    </Grid>
+</UserControl>

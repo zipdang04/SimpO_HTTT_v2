@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="Client.Viewer.GamesControl.AccelViewerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Client.Viewer.GamesControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1600">
+    <Grid>
+        <!--
+        <Grid.Background>
+            <ImageBrush ImageSource="D:/dmcs.png"/>
+        </Grid.Background>
+        -->
+        <MediaElement x:Name="mediaStart" LoadedBehavior="Manual" MediaEnded="mediaStart_MediaEnded"/>
+        <MediaElement x:Name="mediaRun" LoadedBehavior="Manual"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="217*"/>
+                <ColumnDefinition Width="510*"/>
+                <ColumnDefinition Width="73*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="49*"/>
+                <RowDefinition Height="69*"/>
+                <RowDefinition Height="782*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" Grid.Column="1" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock x:Name="txtQuestion" TextWrapping="Wrap" TextAlignment="Center"/>
+            </Label>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="435*"/>
+                <ColumnDefinition Width="1018*"/>
+                <ColumnDefinition Width="147*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32*"/>
+                <RowDefinition Height="129*"/>
+                <RowDefinition Height="19*"/>
+            </Grid.RowDefinitions>
+            <MediaElement x:Name="media" Grid.Row="1" Grid.Column="1" LoadedBehavior="Manual" ScrubbingEnabled="True" MediaOpened="media_MediaOpened"/>
+        </Grid>
+
+    </Grid>
+</UserControl>

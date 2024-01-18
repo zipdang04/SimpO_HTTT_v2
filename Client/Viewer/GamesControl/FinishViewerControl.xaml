@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="Client.Viewer.GamesControl.FinishViewerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Client.Viewer.GamesControl"
+             xmlns:compo="clr-namespace:Client.Viewer.GamesControl.Components"
+             xmlns:gif="http://wpfanimatedgif.codeplex.com"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1600">
+    <Grid>
+        <!--
+        <Grid.Background>
+            <ImageBrush ImageSource="../../Resources/Effects/Background.png"/>
+        </Grid.Background>
+        -->
+        <Grid x:Name="gridPoint">
+            <Image x:Name="backgroundPoint" Source="../../Resources/Effects/VD_Choosing.png"/>  
+            <MediaElement x:Name="mediaBegin" LoadedBehavior="Manual" MediaEnded="mediaBegin_MediaEnded"/>
+            <MediaElement x:Name="mediaStart" LoadedBehavior="Manual" MediaEnded="mediaStart_MediaEnded"/>
+            <compo:PointChoosing x:Name="pointChoosing"/> 
+        </Grid>
+        <Grid x:Name="gridQuestion" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="640*"/>
+                <RowDefinition Height="260*"/>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="../../Resources/Effects/VD_QuesBackground.png"/>
+            </Grid.Background>
+            <MediaElement x:Name="media10s" LoadedBehavior="Manual" Grid.RowSpan="2" MediaEnded="media10s_MediaEnded"/>
+            <MediaElement x:Name="media15s" LoadedBehavior="Manual" Grid.RowSpan="2" MediaEnded="media15s_MediaEnded"/>
+            <MediaElement x:Name="media20s" LoadedBehavior="Manual" Grid.RowSpan="2" MediaEnded="media20s_MediaEnded"/>
+            <compo:QNPBox x:Name="questionBox" Grid.RowSpan="2"/>
+            <Image x:Name="mediaStarAnimate" gif:ImageBehavior.AnimatedSource="../../Resources/Effects/VD_Star.gif" Margin="40,450,1330,154" Grid.RowSpan="2"/>
+        </Grid>
+        <Grid x:Name="gridPrac" Visibility="Hidden" Background="#FFF5EAD7">
+            <Label x:Name="lblTime" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="170">60</Label>
+        </Grid>
+        <Grid x:Name="gridMedia" Visibility="Hidden">
+            <Grid.Background>
+                <SolidColorBrush Color="#FFF5EAD7"/>
+            </Grid.Background>
+            <MediaElement x:Name="media" LoadedBehavior="Manual"/>
+        </Grid>
+    </Grid>
+</UserControl>

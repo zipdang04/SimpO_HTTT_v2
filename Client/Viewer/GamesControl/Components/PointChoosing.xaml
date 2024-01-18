@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Client.Viewer.GamesControl.Components.PointChoosing"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Client.Viewer.GamesControl.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1600">
+    <Grid>
+        <Label x:Name="lbl1_10" Content="✓" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="53" Margin="1226,112,0,0" VerticalAlignment="Top" Width="53" FontWeight="Bold" Foreground="White" FontSize="40" FontFamily="Times New Roman" Visibility="Hidden"/>
+        <Label x:Name="lbl2_10" Content="✓" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="53" Margin="1226,174,0,0" VerticalAlignment="Top" Width="53" FontWeight="Bold" Foreground="White" FontSize="40" FontFamily="Times New Roman" Visibility="Hidden"/>
+        <Label x:Name="lbl3_10" Content="✓" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="53" Margin="1226,236,0,0" VerticalAlignment="Top" Width="53" FontWeight="Bold" Foreground="White" FontSize="40" FontFamily="Times New Roman" Visibility="Hidden"/>
+        <Label x:Name="lbl1_20" Content="✓" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="53" Margin="1226,224,0,0" VerticalAlignment="Top" Width="53" FontWeight="Bold" Foreground="White" FontSize="40" FontFamily="Times New Roman"/>
+        <Label x:Name="lbl2_20" Content="✓" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="53" Margin="1226,285,0,0" VerticalAlignment="Top" Width="53" FontWeight="Bold" Foreground="White" FontSize="40" FontFamily="Times New Roman"/>
+        <Label x:Name="lbl3_20" Content="✓" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="53" Margin="1226,348,0,0" VerticalAlignment="Top" Width="53" FontWeight="Bold" Foreground="White" FontSize="40" FontFamily="Times New Roman"/>
+        <Label x:Name="lbl1_30" Content="✓" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="53" Margin="1226,448,0,0" VerticalAlignment="Top" Width="53" FontWeight="Bold" Foreground="White" FontSize="40" FontFamily="Times New Roman"/>
+        <Label x:Name="lbl2_30" Content="✓" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="53" Margin="1226,509,0,0" VerticalAlignment="Top" Width="53" FontWeight="Bold" Foreground="White" FontSize="40" FontFamily="Times New Roman"/>
+        <Label x:Name="lbl3_30" Content="✓" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="53" Margin="1226,571, 0,0" VerticalAlignment="Top" Width="53" FontWeight="Bold" Foreground="White" FontSize="40" FontFamily="Times New Roman"/>
+    </Grid>
+</UserControl>
